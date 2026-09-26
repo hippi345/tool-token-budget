@@ -20,6 +20,7 @@ import {
   detectClientConfigs,
   getAppDataDirFor,
 } from "../src/discover/clientConfigs.js";
+import { assertClientConfigPathsIsolated } from "../src/utils/testHomeGuard.js";
 import {
   getServerNamesFromClientConfig,
   mergeProposedOntoClientConfig,
@@ -110,13 +111,19 @@ async function roundTripClient(
 describe("Stage 2 — client write support", () => {
   it("stage2-item-guard-no-real-home", async () => {
     const realHome = process.env.__TEST_REAL_HOME || process.env.REAL_HOME;
+    const isolatedHome = process.env.__TEST_ISOLATED_HOME;
     expect(realHome).toBeTruthy();
+    expect(isolatedHome).toBeTruthy();
     expect(path.normalize(os.homedir())).not.toBe(path.normalize(realHome));
     const clients = await detectClientConfigs(process.cwd());
-    const normalizedRealHome = path.normalize(realHome);
-    for (const client of clients) {
-      expect(path.normalize(client.path)).not.toContain(normalizedRealHome);
-    }
+    assertClientConfigPathsIsolated(
+      clients.map((c) => c.path),
+      {
+        isolatedHome: isolatedHome!,
+        realHome: realHome!,
+        cwd: process.cwd(),
+      }
+    );
   });
 
   it("stage2-adapter-vscode-injects-stdio-type", () => {

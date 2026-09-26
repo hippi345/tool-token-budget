@@ -1,4 +1,5 @@
 import path from "node:path";
+import { isPathContainedIn } from "./pathContainment.js";
 
 type PathLike = Pick<typeof path, "resolve" | "join" | "relative" | "isAbsolute">;
 
@@ -41,4 +42,53 @@ export function isDangerousTestHome(
   }
 
   return false;
+}
+
+export interface TestIsolationPathCheck {
+  isolatedHome: string;
+  realHome: string;
+  cwd: string;
+  /** Use path.win32 in unit tests that simulate Windows layouts on Linux CI. */
+  pathModule?: typeof path;
+}
+
+/**
+ * Vitest guard: client config paths must live in the per-worker isolated HOME
+ * or in the repo cwd (project-scoped configs). Rejects paths under the real
+ * profile that are outside the isolated sandbox (substring checks are wrong
+ * when the checkout or temp dir sits under the real home).
+ */
+export function isAllowedClientConfigPathForTestIsolation(
+  clientPath: string,
+  opts: TestIsolationPathCheck
+): boolean {
+  const pathImpl = opts.pathModule ?? path;
+  const resolved = pathImpl.resolve(clientPath);
+  const isolated = pathImpl.resolve(opts.isolatedHome);
+  const real = pathImpl.resolve(opts.realHome);
+  const cwd = pathImpl.resolve(opts.cwd);
+
+  if (isPathContainedIn(resolved, isolated, { pathModule: pathImpl })) {
+    return true;
+  }
+  if (isPathContainedIn(resolved, cwd, { pathModule: pathImpl })) {
+    return true;
+  }
+  if (isPathContainedIn(resolved, real, { pathModule: pathImpl })) {
+    return false;
+  }
+  return true;
+}
+
+export function assertClientConfigPathsIsolated(
+  clientPaths: string[],
+  opts: TestIsolationPathCheck
+): void {
+  for (const clientPath of clientPaths) {
+    if (!isAllowedClientConfigPathForTestIsolation(clientPath, opts)) {
+      throw new Error(
+        `Client config path resolves under real home outside isolated test HOME: ${clientPath}`
+      );
+    }
+  }
 }

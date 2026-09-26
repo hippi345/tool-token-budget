@@ -358,7 +358,7 @@ npm run test:e2e:setup
 npm run test:e2e
 ```
 
-Unit tests use an isolated fake `HOME` under the repo (`tmp/test-isolation`); they do not read or write your real MCP config.
+Unit tests use an isolated fake `HOME` under the system temp directory (unique per vitest worker); they do not read or write your real MCP config.
 
 ## License
 
