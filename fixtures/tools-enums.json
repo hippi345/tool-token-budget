@@ -1,0 +1,83 @@
+{
+  "servers": [
+    {
+      "name": "enum-server",
+      "tools": [
+        {
+          "name": "pick_one",
+          "description": "Pick from a huge enum",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "choice": {
+                "type": "string",
+                "enum": [
+                  "option_0",
+                  "option_1",
+                  "option_2",
+                  "option_3",
+                  "option_4",
+                  "option_5",
+                  "option_6",
+                  "option_7",
+                  "option_8",
+                  "option_9",
+                  "option_10",
+                  "option_11",
+                  "option_12",
+                  "option_13",
+                  "option_14",
+                  "option_15",
+                  "option_16",
+                  "option_17",
+                  "option_18",
+                  "option_19",
+                  "option_20",
+                  "option_21",
+                  "option_22",
+                  "option_23",
+                  "option_24",
+                  "option_25",
+                  "option_26",
+                  "option_27",
+                  "option_28",
+                  "option_29",
+                  "option_30",
+                  "option_31",
+                  "option_32",
+                  "option_33",
+                  "option_34",
+                  "option_35",
+                  "option_36",
+                  "option_37",
+                  "option_38",
+                  "option_39",
+                  "option_40",
+                  "option_41",
+                  "option_42",
+                  "option_43",
+                  "option_44",
+                  "option_45",
+                  "option_46",
+                  "option_47",
+                  "option_48",
+                  "option_49",
+                  "option_50",
+                  "option_51",
+                  "option_52",
+                  "option_53",
+                  "option_54",
+                  "option_55",
+                  "option_56",
+                  "option_57",
+                  "option_58",
+                  "option_59"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+=== Tool Token Budget Demo ===
+
+Analyzing a bloated MCP server with 5 tools...
+
+tool-token-budget - MCP schema token estimates
+tokenizer: o200k_base (estimate)
+totals: ~3550 tokens (estimate) across 5 tools / 2 servers
+
+Ranked tools (estimate, highest first):
+SERVER            TOOL                    EST     NAME  DESC  SCHEMA
+------------------------------------------------------------------------
+bloated-server    mega_search             3451    2     321   3128
+bloated-server    medium_list             50      2     11    37
+bloated-server    tiny_helper             18      2     2     14
+other             beta                    18      1     3     14
+other             alpha                   13      1     3     9
+
+Lint findings (2):
+  [warn] description-too-long bloated-server::mega_search — Description is 1440 chars (threshold 500)
+  [warn] schema-too-large bloated-server::mega_search — Schema estimate 3128 tokens (threshold 800)
+
+---
+
+Now emitting proposals to keep only 2 cheapest tools hot...
+
+wrote /tmp/demo-out/report.json
+wrote /tmp/demo-out/defer-hints.json
+wrote /tmp/demo-out/tool-token-budget.keep.json
+
+Savings analysis:
+{
+  "currentEstTokens": 3550,
+  "proposedEstTokens": 31,
+  "savedEstTokens": 3519,
+  "savedPct": 99.13
+}
+
+---
+Check defer-hints.json to see which tools should be deferred:
+
+"mega_search"
+"medium_list"
+"beta"

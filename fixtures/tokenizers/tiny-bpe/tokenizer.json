@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "added_tokens": [],
+  "normalizer": { "type": "NFC" },
+  "decoder": { "type": "ByteLevel" },
+  "post_processor": {
+    "type": "ByteLevel",
+    "add_prefix_space": false,
+    "trim_offsets": false,
+    "use_regex": false
+  },
+  "pre_tokenizer": {
+    "type": "ByteLevel",
+    "add_prefix_space": false,
+    "trim_offsets": false,
+    "use_regex": false
+  },
+  "model": {
+    "type": "BPE",
+    "vocab": {
+      "<unk>": 0,
+      "hello": 1,
+      "world": 2,
+      "Ġ": 3,
+      "Ġworld": 4
+    },
+    "merges": [],
+    "ignore_merges": true
+  }
+}

@@ -1,0 +1,558 @@
+{
+  "servers": [
+    {
+      "name": "bloated-server",
+      "tools": [
+        {
+          "name": "mega_search",
+          "description": "This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. This tool does a great many things. ",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "field_0_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 0 to inflate schema tokens substantially."
+              },
+              "field_1_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 1 to inflate schema tokens substantially."
+              },
+              "field_2_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 2 to inflate schema tokens substantially."
+              },
+              "field_3_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 3 to inflate schema tokens substantially."
+              },
+              "field_4_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 4 to inflate schema tokens substantially."
+              },
+              "field_5_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 5 to inflate schema tokens substantially."
+              },
+              "field_6_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 6 to inflate schema tokens substantially."
+              },
+              "field_7_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 7 to inflate schema tokens substantially."
+              },
+              "field_8_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 8 to inflate schema tokens substantially."
+              },
+              "field_9_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 9 to inflate schema tokens substantially."
+              },
+              "field_10_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 10 to inflate schema tokens substantially."
+              },
+              "field_11_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 11 to inflate schema tokens substantially."
+              },
+              "field_12_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 12 to inflate schema tokens substantially."
+              },
+              "field_13_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 13 to inflate schema tokens substantially."
+              },
+              "field_14_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 14 to inflate schema tokens substantially."
+              },
+              "field_15_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 15 to inflate schema tokens substantially."
+              },
+              "field_16_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 16 to inflate schema tokens substantially."
+              },
+              "field_17_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 17 to inflate schema tokens substantially."
+              },
+              "field_18_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 18 to inflate schema tokens substantially."
+              },
+              "field_19_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 19 to inflate schema tokens substantially."
+              },
+              "field_20_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 20 to inflate schema tokens substantially."
+              },
+              "field_21_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 21 to inflate schema tokens substantially."
+              },
+              "field_22_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 22 to inflate schema tokens substantially."
+              },
+              "field_23_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 23 to inflate schema tokens substantially."
+              },
+              "field_24_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 24 to inflate schema tokens substantially."
+              },
+              "field_25_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 25 to inflate schema tokens substantially."
+              },
+              "field_26_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 26 to inflate schema tokens substantially."
+              },
+              "field_27_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 27 to inflate schema tokens substantially."
+              },
+              "field_28_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 28 to inflate schema tokens substantially."
+              },
+              "field_29_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 29 to inflate schema tokens substantially."
+              },
+              "field_30_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 30 to inflate schema tokens substantially."
+              },
+              "field_31_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 31 to inflate schema tokens substantially."
+              },
+              "field_32_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 32 to inflate schema tokens substantially."
+              },
+              "field_33_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 33 to inflate schema tokens substantially."
+              },
+              "field_34_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 34 to inflate schema tokens substantially."
+              },
+              "field_35_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 35 to inflate schema tokens substantially."
+              },
+              "field_36_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 36 to inflate schema tokens substantially."
+              },
+              "field_37_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 37 to inflate schema tokens substantially."
+              },
+              "field_38_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 38 to inflate schema tokens substantially."
+              },
+              "field_39_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 39 to inflate schema tokens substantially."
+              },
+              "field_40_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 40 to inflate schema tokens substantially."
+              },
+              "field_41_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 41 to inflate schema tokens substantially."
+              },
+              "field_42_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 42 to inflate schema tokens substantially."
+              },
+              "field_43_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 43 to inflate schema tokens substantially."
+              },
+              "field_44_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 44 to inflate schema tokens substantially."
+              },
+              "field_45_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 45 to inflate schema tokens substantially."
+              },
+              "field_46_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 46 to inflate schema tokens substantially."
+              },
+              "field_47_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 47 to inflate schema tokens substantially."
+              },
+              "field_48_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 48 to inflate schema tokens substantially."
+              },
+              "field_49_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 49 to inflate schema tokens substantially."
+              },
+              "field_50_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 50 to inflate schema tokens substantially."
+              },
+              "field_51_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 51 to inflate schema tokens substantially."
+              },
+              "field_52_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 52 to inflate schema tokens substantially."
+              },
+              "field_53_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 53 to inflate schema tokens substantially."
+              },
+              "field_54_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 54 to inflate schema tokens substantially."
+              },
+              "field_55_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 55 to inflate schema tokens substantially."
+              },
+              "field_56_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 56 to inflate schema tokens substantially."
+              },
+              "field_57_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 57 to inflate schema tokens substantially."
+              },
+              "field_58_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 58 to inflate schema tokens substantially."
+              },
+              "field_59_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 59 to inflate schema tokens substantially."
+              },
+              "field_60_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 60 to inflate schema tokens substantially."
+              },
+              "field_61_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 61 to inflate schema tokens substantially."
+              },
+              "field_62_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 62 to inflate schema tokens substantially."
+              },
+              "field_63_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 63 to inflate schema tokens substantially."
+              },
+              "field_64_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 64 to inflate schema tokens substantially."
+              },
+              "field_65_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 65 to inflate schema tokens substantially."
+              },
+              "field_66_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 66 to inflate schema tokens substantially."
+              },
+              "field_67_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 67 to inflate schema tokens substantially."
+              },
+              "field_68_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 68 to inflate schema tokens substantially."
+              },
+              "field_69_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 69 to inflate schema tokens substantially."
+              },
+              "field_70_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 70 to inflate schema tokens substantially."
+              },
+              "field_71_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 71 to inflate schema tokens substantially."
+              },
+              "field_72_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 72 to inflate schema tokens substantially."
+              },
+              "field_73_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 73 to inflate schema tokens substantially."
+              },
+              "field_74_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 74 to inflate schema tokens substantially."
+              },
+              "field_75_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 75 to inflate schema tokens substantially."
+              },
+              "field_76_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 76 to inflate schema tokens substantially."
+              },
+              "field_77_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 77 to inflate schema tokens substantially."
+              },
+              "field_78_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 78 to inflate schema tokens substantially."
+              },
+              "field_79_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 79 to inflate schema tokens substantially."
+              },
+              "field_80_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 80 to inflate schema tokens substantially."
+              },
+              "field_81_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 81 to inflate schema tokens substantially."
+              },
+              "field_82_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 82 to inflate schema tokens substantially."
+              },
+              "field_83_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 83 to inflate schema tokens substantially."
+              },
+              "field_84_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 84 to inflate schema tokens substantially."
+              },
+              "field_85_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 85 to inflate schema tokens substantially."
+              },
+              "field_86_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 86 to inflate schema tokens substantially."
+              },
+              "field_87_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 87 to inflate schema tokens substantially."
+              },
+              "field_88_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 88 to inflate schema tokens substantially."
+              },
+              "field_89_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 89 to inflate schema tokens substantially."
+              },
+              "field_90_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 90 to inflate schema tokens substantially."
+              },
+              "field_91_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 91 to inflate schema tokens substantially."
+              },
+              "field_92_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 92 to inflate schema tokens substantially."
+              },
+              "field_93_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 93 to inflate schema tokens substantially."
+              },
+              "field_94_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 94 to inflate schema tokens substantially."
+              },
+              "field_95_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 95 to inflate schema tokens substantially."
+              },
+              "field_96_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 96 to inflate schema tokens substantially."
+              },
+              "field_97_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 97 to inflate schema tokens substantially."
+              },
+              "field_98_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 98 to inflate schema tokens substantially."
+              },
+              "field_99_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 99 to inflate schema tokens substantially."
+              },
+              "field_100_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 100 to inflate schema tokens substantially."
+              },
+              "field_101_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 101 to inflate schema tokens substantially."
+              },
+              "field_102_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 102 to inflate schema tokens substantially."
+              },
+              "field_103_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 103 to inflate schema tokens substantially."
+              },
+              "field_104_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 104 to inflate schema tokens substantially."
+              },
+              "field_105_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 105 to inflate schema tokens substantially."
+              },
+              "field_106_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 106 to inflate schema tokens substantially."
+              },
+              "field_107_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 107 to inflate schema tokens substantially."
+              },
+              "field_108_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 108 to inflate schema tokens substantially."
+              },
+              "field_109_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 109 to inflate schema tokens substantially."
+              },
+              "field_110_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 110 to inflate schema tokens substantially."
+              },
+              "field_111_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 111 to inflate schema tokens substantially."
+              },
+              "field_112_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 112 to inflate schema tokens substantially."
+              },
+              "field_113_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 113 to inflate schema tokens substantially."
+              },
+              "field_114_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 114 to inflate schema tokens substantially."
+              },
+              "field_115_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 115 to inflate schema tokens substantially."
+              },
+              "field_116_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 116 to inflate schema tokens substantially."
+              },
+              "field_117_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 117 to inflate schema tokens substantially."
+              },
+              "field_118_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 118 to inflate schema tokens substantially."
+              },
+              "field_119_longish_name": {
+                "type": "string",
+                "description": "Description padding for field 119 to inflate schema tokens substantially."
+              }
+            }
+          }
+        },
+        {
+          "name": "tiny_helper",
+          "description": "Small helper",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "medium_list",
+          "description": "List things with a moderately sized schema and description text.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "limit": {
+                "type": "number"
+              },
+              "filter": {
+                "type": "string"
+              },
+              "sort": {
+                "type": "string",
+                "enum": [
+                  "asc",
+                  "desc",
+                  "name"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "tools": [
+        {
+          "name": "alpha",
+          "description": "Alpha tool short",
+          "inputSchema": {
+            "type": "object",
+            "properties": {}
+          }
+        },
+        {
+          "name": "beta",
+          "description": "Beta tool short",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

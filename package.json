@@ -1,0 +1,77 @@
+{
+  "name": "tool-token-budget",
+  "version": "1.0.0",
+  "description": "Tool Token Budget — measure MCP tool schema token cost, lint bloat, and emit slim keep-lists plus defer hints",
+  "type": "module",
+  "workspaces": [
+    "gui"
+  ],
+  "bin": {
+    "tool-token-budget": "./dist/cli.js",
+    "schema-budget": "./dist/cli.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "npm run build:cli && npm run build:gui",
+    "build:cli": "tsc",
+    "build:gui": "npm run build --workspace=gui",
+    "test": "node scripts/run-vitest-projects.mjs",
+    "test:e2e": "node test/e2e/playwright-loader.cjs",
+    "test:e2e:setup": "playwright install chromium",
+    "smoke:real": "bash scripts/smoke.sh",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "tokens",
+    "cli",
+    "ai-tools",
+    "schema",
+    "budget"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hippi345/tool-token-budget.git"
+  },
+  "homepage": "https://github.com/hippi345/tool-token-budget#readme",
+  "bugs": {
+    "url": "https://github.com/hippi345/tool-token-budget/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@decimalturn/toml-patch": "^3.2.1",
+    "@modelcontextprotocol/sdk": "^1.18.0",
+    "commander": "^14.0.0",
+    "js-tiktoken": "^1.0.21",
+    "jsonc-parser": "^3.3.1"
+  },
+  "peerDependencies": {
+    "@huggingface/tokenizers": "0.2.0"
+  },
+  "peerDependenciesMeta": {
+    "@huggingface/tokenizers": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@huggingface/tokenizers": "0.2.0",
+    "@playwright/test": "^1.48.0",
+    "@testing-library/react": "^16.1.0",
+    "@types/node": "^22.15.0",
+    "happy-dom": "^20.14.5",
+    "typescript": "^5.8.0",
+    "vitest": "5.0.2"
+  },
+  "files": [
+    "dist",
+    "fixtures",
+    "README.md",
+    "gui/package.json"
+  ],
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  }
+}

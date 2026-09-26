@@ -1,0 +1,19 @@
+{
+  "servers": {
+    "alpha": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["fixtures/stub-mcp-server.mjs"]
+    },
+    "beta": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["fixtures/stub-mcp-server.mjs"]
+    },
+    "gamma": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["fixtures/stub-mcp-server.mjs"]
+    }
+  }
+}

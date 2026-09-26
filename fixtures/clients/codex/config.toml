@@ -1,0 +1,18 @@
+# OpenAI Codex user configuration
+model = "o3"
+
+[features]
+network_proxy.enabled = false
+
+[mcp_servers.alpha]
+command = "node"
+args = ["fixtures/stub-mcp-server.mjs"]
+
+[mcp_servers.beta]
+command = "node"
+args = ["fixtures/stub-mcp-server.mjs"]
+
+[mcp_servers.off]
+command = "node"
+args = ["fixtures/stub-mcp-server.mjs"]
+enabled = false

@@ -1,0 +1,1 @@
+{"role":"assistant","message":{"content":[{"type":"tool_use","name":"mcp__tiny__ping","id":"c1","input":{}}]}}

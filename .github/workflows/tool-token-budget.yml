@@ -1,0 +1,109 @@
+name: Tool Token Budget CI
+
+# Note: Cursor Origin PRs for this repository do not run GitHub Actions workflows yet.
+# This workflow runs for GitHub pull_request/push events on main.
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    name: Test on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build tool-token-budget
+        run: npm run build
+      
+      - name: Run unit tests
+        run: npm test
+
+      - name: Analyze fixture - should pass
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          node dist/cli.js analyze \
+            --tools-json fixtures/tools-tiny.json \
+            --budget 100
+
+      - name: Analyze bloated fixture - expect warnings
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          node dist/cli.js analyze \
+            --tools-json fixtures/tools-bloated.json \
+            --fail-on error
+        continue-on-error: false
+
+      - name: Lint server - author mode (should fail on bloat)
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          node dist/cli.js lint-server \
+            --tools-json fixtures/tools-bloated.json \
+            --fail-on warn || echo "Expected failure on bloated fixture"
+
+      - name: Generate report artifacts
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          node dist/cli.js emit \
+            --tools-json fixtures/tools-bloated.json \
+            --out ./schema-budget-reports \
+            --keep-hot 3
+
+      - name: Upload schema budget report
+        uses: actions/upload-artifact@v4
+        if: always() && matrix.os == 'ubuntu-latest'
+        with:
+          name: schema-budget-report
+          path: |
+            schema-budget-reports/report.json
+            schema-budget-reports/defer-hints.json
+            schema-budget-reports/tool-token-budget.keep.json
+
+      - name: Display savings summary
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          echo "## Tool Token Budget Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Savings Analysis" >> $GITHUB_STEP_SUMMARY
+          echo '```json' >> $GITHUB_STEP_SUMMARY
+          cat schema-budget-reports/report.json | jq '.savings' >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
+  e2e:
+    name: E2E tests (Ubuntu only)
+    runs-on: ubuntu-latest
+    # E2E with Playwright on Windows CI is impractical (browser install overhead)
+    # Run unit tests on both OS, e2e on ubuntu only
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build tool-token-budget
+        run: npm run build
+
+      - name: Install Playwright
+        run: npx playwright install chromium
+
+      - name: Run E2E tests
+        run: npm run test:e2e

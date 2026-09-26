@@ -1,0 +1,2592 @@
+{
+  "servers": [
+    {
+      "name": "word",
+      "tools": [
+        {
+          "name": "cheap1",
+          "description": "Cheap tool",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "cheap2",
+          "description": "Cheap tool",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "cheap3",
+          "description": "Cheap tool",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "cheap4",
+          "description": "Cheap tool",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "cheap5",
+          "description": "Cheap tool",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_6",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_7",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_8",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_9",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_10",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_11",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_12",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_13",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_14",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_15",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_16",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_17",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_18",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_19",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_20",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_21",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_22",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_23",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_24",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_25",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_26",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_27",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_28",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_29",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_30",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_31",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_32",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_33",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_34",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_35",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_36",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_37",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_38",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_39",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_40",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_41",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_42",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_43",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_44",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_45",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_46",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_47",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_48",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_49",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_50",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_51",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_52",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_53",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_54",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_55",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_56",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_57",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_58",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_59",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_60",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_61",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_62",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_63",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_64",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_65",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_66",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_67",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_68",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_69",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_70",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_71",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_72",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_73",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_74",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_75",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_76",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_77",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_78",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_79",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_80",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_81",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_82",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_83",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_84",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_85",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_86",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_87",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_88",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_89",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_90",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_91",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_92",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_93",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_94",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_95",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_96",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_97",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_98",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_99",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_100",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_101",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_102",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_103",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_104",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_105",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_106",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_107",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_108",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_109",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_110",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_111",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_112",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_113",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_114",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_115",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_116",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_117",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_118",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_119",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "word_tool_120",
+          "description": "Word processing tool with moderate description",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to process"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "html",
+                  "markdown"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "windows-mcp",
+      "tools": [
+        {
+          "name": "win_cmd",
+          "description": "Run Windows command",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "cmd": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "win_ps",
+          "description": "Run PowerShell",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "script": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "win_reg",
+          "description": "Registry access",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "filesystem",
+      "tools": [
+        {
+          "name": "read",
+          "description": "Read file",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "write",
+          "description": "Write file",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "content": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "pdf-reader",
+      "tools": [
+        {
+          "name": "extract",
+          "description": "Extract text from PDF",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "search",
+          "description": "Search in PDF",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "query": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

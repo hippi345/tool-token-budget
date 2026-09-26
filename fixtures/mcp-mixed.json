@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "stub": {
+      "command": "node",
+      "args": ["fixtures/stub-mcp-server.mjs"],
+      "env": {
+        "STUB_ENV": "test-value"
+      }
+    },
+    "missing-binary": {
+      "command": "nonexistent-binary-xyz",
+      "args": ["--version"]
+    },
+    "remote-sse": {
+      "type": "sse",
+      "url": "https://example.com/mcp/sse"
+    },
+    "remote-http": {
+      "url": "https://api.example.com/mcp"
+    }
+  }
+}

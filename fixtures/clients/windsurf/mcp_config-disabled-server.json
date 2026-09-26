@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "enabled": {
+      "command": "node",
+      "args": ["fixtures/stub-mcp-server.mjs"]
+    },
+    "disabled-one": {
+      "command": "node",
+      "args": ["fixtures/stub-mcp-server.mjs"],
+      "disabled": true
+    }
+  }
+}

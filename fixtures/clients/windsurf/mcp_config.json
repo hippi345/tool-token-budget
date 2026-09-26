@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "alpha": {
+      "command": "node",
+      "args": ["fixtures/stub-mcp-server.mjs"]
+    },
+    "beta": {
+      "command": "node",
+      "args": ["fixtures/stub-mcp-server.mjs"]
+    },
+    "gamma": {
+      "command": "node",
+      "args": ["fixtures/stub-mcp-server.mjs"]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  // VS Code user MCP (JSONC)
+  "editor.fontSize": 14,
+  "mcp": {
+    "servers": {
+      "alpha": {
+        "type": "stdio",
+        "command": "node",
+        "args": ["fixtures/stub-mcp-server.mjs"]
+      },
+      "beta": {
+        "type": "stdio",
+        "command": "node",
+        "args": ["fixtures/stub-mcp-server.mjs"]
+      }
+    }
+  },
+  "workbench.colorTheme": "Default Dark+"
+}

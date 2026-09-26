@@ -1,0 +1,22 @@
+{
+  "servers": [
+    {
+      "name": "tiny",
+      "tools": [
+        {
+          "name": "ping",
+          "description": "Health check",
+          "inputSchema": { "type": "object", "properties": {} }
+        },
+        {
+          "name": "echo",
+          "description": "Echo a message",
+          "inputSchema": {
+            "type": "object",
+            "properties": { "msg": { "type": "string" } }
+          }
+        }
+      ]
+    }
+  ]
+}
