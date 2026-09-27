@@ -31,10 +31,11 @@ import {
   parseClientConfigContent,
 } from "../src/config/configSurfaces.js";
 import { computeConfigContentHash } from "../src/mcp/configGuards.js";
+import { injectStubServerPath, stubServerConfigPath } from "./helpers/stubServerPath.js";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const cliPath = path.join(repoRoot, "dist", "cli.js");
-const stub = path.join(repoRoot, "fixtures", "stub-mcp-server.mjs");
+const stub = stubServerConfigPath(repoRoot);
 
 async function copyFixtureToTemp(
   relFixture: string,
@@ -46,7 +47,7 @@ async function copyFixtureToTemp(
   await mkdir(path.dirname(configPath), { recursive: true });
   await copyFile(path.join(repoRoot, relFixture), configPath);
   let content = await readFile(configPath, "utf8");
-  content = content.replace(/fixtures\/stub-mcp-server\.mjs/g, stub);
+  content = injectStubServerPath(content, repoRoot);
   await writeFile(configPath, content, "utf8");
   return { dir, configPath };
 }
@@ -72,7 +73,7 @@ async function seedWritableClient(
   cwd: string
 ): Promise<{ configPath: string; proposedPath: string }> {
   const appData = getAppDataDirFor(process.platform, home, process.env);
-  const stubArg = stub.replace(/\\/g, "/");
+  const stubArg = stub;
   let configPath = "";
 
   switch (id) {
