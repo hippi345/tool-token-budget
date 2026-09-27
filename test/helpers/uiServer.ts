@@ -7,6 +7,14 @@ export function serverOrigin(server: ServerInstance): string {
   return u.origin;
 }
 
+export function serverListenPort(server: ServerInstance): number {
+  const port = new URL(server.url).port;
+  if (!port) {
+    throw new Error(`Server URL has no port: ${server.url}`);
+  }
+  return parseInt(port, 10);
+}
+
 export function apiPost(
   server: ServerInstance,
   apiPath: string,

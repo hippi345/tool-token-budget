@@ -1592,9 +1592,14 @@ export async function startServer(config: ServerConfig): Promise<ServerInstance>
     }
   });
 
-  const port = config.port || 0;
-  await new Promise<void>((resolve) => {
+  const port = config.port ?? 0;
+  await new Promise<void>((resolve, reject) => {
+    const onError = (err: NodeJS.ErrnoException) => {
+      reject(new Error(`UI server failed to listen on 127.0.0.1:${port}: ${err.message}`, { cause: err }));
+    };
+    server.once("error", onError);
     server.listen(port, "127.0.0.1", () => {
+      server.off("error", onError);
       resolve();
     });
   });

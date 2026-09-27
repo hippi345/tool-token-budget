@@ -1629,9 +1629,8 @@ describe("Stage C: --tools-json guard (MUST 2)", () => {
     const originalContent = await readFile(configPath, "utf8");
     
     // Start server with reportSource: 'tools-json' on unique port
-    const testPort = 47777;
     const testServer = await startServer({
-      port: testPort,
+      port: 0,
       onReady: () => {},
       getReport: () => report,
       configPath,
@@ -1640,7 +1639,7 @@ describe("Stage C: --tools-json guard (MUST 2)", () => {
     });
     
     try {
-      const baseUrl = `http://127.0.0.1:${testPort}`;
+      const baseUrl = serverOrigin(testServer);
       const token = testServer.token;
       
       // Try preview - should return 422
@@ -1743,9 +1742,8 @@ describe("Stage C: HTTP-level sentinel leak test (Item 2)", () => {
     const { servers: toolServers, tools: toolsList } = await loadToolsJson(fixtureToolsPath);
     const testReport = analyzeTools(toolsList, toolServers);
     
-    const testPort = 48888;
     const testServer = await startServer({
-      port: testPort,
+      port: 0,
       onReady: () => {},
       getReport: () => testReport,
       configPath: sentinelConfigPath,
@@ -1754,7 +1752,7 @@ describe("Stage C: HTTP-level sentinel leak test (Item 2)", () => {
     });
     
     try {
-      const baseUrl = `http://127.0.0.1:${testPort}`;
+      const baseUrl = serverOrigin(testServer);
       const allSentinels = [
         "SENTINEL_ARG_FLAG_aaa",
         "SENTINEL_ARG_TWO_ELEM_bbb",
@@ -1943,9 +1941,8 @@ describe("Stage C: HTTP-level sentinel leak test (Item 2)", () => {
     const { servers: toolServers, tools: toolsList } = await loadToolsJson(fixtureToolsPath);
     const testReport = analyzeTools(toolsList, toolServers);
     
-    const testPort = 49999;
     const testServer = await startServer({
-      port: testPort,
+      port: 0,
       onReady: () => {},
       getReport: () => testReport,
       configPath: cleanConfigPath,
@@ -1954,7 +1951,7 @@ describe("Stage C: HTTP-level sentinel leak test (Item 2)", () => {
     });
     
     try {
-      const baseUrl = `http://127.0.0.1:${testPort}`;
+      const baseUrl = serverOrigin(testServer);
       const policy: PolicyOptions = { keepPerServer: 5 };
       
       // Test /api/proposal

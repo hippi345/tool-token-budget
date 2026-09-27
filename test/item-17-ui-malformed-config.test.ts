@@ -5,6 +5,7 @@ import { tmpdir } from "node:os";
 import net from "node:net";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { reserveFreeTcpPort } from "./helpers/ephemeralPort.js";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -38,10 +39,11 @@ function runUi(args: string[]): Promise<{ exitCode: number | null; output: strin
 
 describe("item 17: ui validates config before starting server", () => {
   let cliPath: string;
-  const testPort = 47666;
+  let testPort: number;
 
-  beforeAll(() => {
+  beforeAll(async () => {
     cliPath = path.join(repoRoot, "dist", "cli.js");
+    testPort = await reserveFreeTcpPort();
   });
 
   afterEach(async () => {

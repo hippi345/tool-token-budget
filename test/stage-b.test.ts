@@ -8,7 +8,7 @@ import { fileURLToPath } from "node:url";
 import { readFile, rm, mkdir, writeFile, mkdtemp } from "node:fs/promises";
 import * as fs from "node:fs";
 import os from "node:os";
-import { serverOrigin } from "./helpers/uiServer.js";
+import { serverOrigin, serverListenPort } from "./helpers/uiServer.js";
 import type { Report, PolicyOptions } from "../src/types.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -552,9 +552,8 @@ describe("Stage B: Export security", () => {
     const testConfig = JSON.parse(await readFile(fixtureConfigPath, "utf8"));
     await writeFile(testConfigPath, JSON.stringify(testConfig, null, 2) + "\n", "utf8");
 
-    const testPort = 45128;
     const exportServer = await startServer({
-      port: testPort,
+      port: 0,
       onReady: () => {},
       getReport: () => report,
       configPath: testConfigPath,
@@ -564,12 +563,12 @@ describe("Stage B: Export security", () => {
     });
 
     try {
-      const res = await fetch(`http://127.0.0.1:${testPort}/api/export`, {
+      const res = await fetch(`${serverOrigin(exportServer)}/api/export`, {
         method: "POST",
         headers: {
           "X-Auth-Token": exportServer.token,
           "Content-Type": "application/json",
-          Origin: `http://127.0.0.1:${testPort}`,
+          Origin: `${serverOrigin(exportServer)}`,
         },
         body: JSON.stringify({
           policy: { keepPerServer: 2 },
@@ -611,14 +610,13 @@ describe("Stage B: Export security", () => {
       },
     };
     // Start a new server with this config
-    const testPort = 45789;
     const { servers, tools } = await loadToolsJson(fixtureToolsPath);
     const testReport = analyzeTools(tools, servers);
     
     const initialContent = JSON.stringify(testConfig) + "\n";
     await writeFile(testConfigPath, initialContent, "utf8");
     const testServer = await startServer({
-      port: testPort,
+      port: 0,
       onReady: () => {},
       getReport: () => testReport,
       configPath: testConfigPath,
@@ -628,12 +626,12 @@ describe("Stage B: Export security", () => {
     });
     
     // Use policy that keeps zero tools per server
-    const res = await fetch(`http://127.0.0.1:${testPort}/api/export`, {
+    const res = await fetch(`${serverOrigin(testServer)}/api/export`, {
       method: "POST",
       headers: {
         "X-Auth-Token": testServer.token,
         "Content-Type": "application/json",
-        "Origin": `http://127.0.0.1:${testPort}`,
+        "Origin": `${serverOrigin(testServer)}`,
       },
       body: JSON.stringify({ 
         policy: { keepPerServer: 0 },
@@ -687,9 +685,8 @@ describe("Stage B: Export security", () => {
     const parityConfigPath = path.join(cursorDir, "mcp.json");
     await writeFile(parityConfigPath, JSON.stringify(originalConfig, null, 2) + "\n", "utf8");
 
-    const testPort = 45126;
     const testServer = await startServer({
-      port: testPort,
+      port: 0,
       onReady: () => {},
       getReport: () => report,
       configPath: parityConfigPath,
@@ -699,12 +696,12 @@ describe("Stage B: Export security", () => {
     });
 
     try {
-      const res = await fetch(`http://127.0.0.1:${testPort}/api/export`, {
+      const res = await fetch(`${serverOrigin(testServer)}/api/export`, {
         method: "POST",
         headers: {
           "X-Auth-Token": testServer.token,
           "Content-Type": "application/json",
-          "Origin": `http://127.0.0.1:${testPort}`,
+          "Origin": `${serverOrigin(testServer)}`,
         },
         body: JSON.stringify({ 
           policy, 
@@ -858,24 +855,23 @@ describe("Stage B: Policy defaults", () => {
 
 describe("Stage B: Watch interval control", () => {
   it("POST /api/watch-interval requires auth", async () => {
-    const testPort = 45130;
     const { servers, tools } = await loadToolsJson(fixtureToolsPath);
     const report = analyzeTools(tools, servers);
     
     const server = await startServer({
-      port: testPort,
+      port: 0,
       onReady: () => {},
       getReport: () => report,
       cwd: __dirname,
     });
 
     try {
-      const res = await fetch(`http://127.0.0.1:${testPort}/api/watch-interval`, {
+      const res = await fetch(`${serverOrigin(server)}/api/watch-interval`, {
         method: "POST",
         headers: {
           "X-Auth-Token": "invalid-token",
           "Content-Type": "application/json",
-          "Origin": `http://127.0.0.1:${testPort}`,
+          "Origin": `${serverOrigin(server)}`,
         },
         body: JSON.stringify({ intervalSec: 30 }),
       });
@@ -886,12 +882,11 @@ describe("Stage B: Watch interval control", () => {
   });
 
   it("POST /api/watch-interval enforces bounds (10-3600)", async () => {
-    const testPort = 45131;
     const { servers, tools } = await loadToolsJson(fixtureToolsPath);
     const report = analyzeTools(tools, servers);
     
     const server = await startServer({
-      port: testPort,
+      port: 0,
       onReady: () => {},
       getReport: () => report,
       cwd: __dirname,
@@ -899,36 +894,36 @@ describe("Stage B: Watch interval control", () => {
 
     try {
       // Test too low
-      let res = await fetch(`http://127.0.0.1:${testPort}/api/watch-interval`, {
+      let res = await fetch(`${serverOrigin(server)}/api/watch-interval`, {
         method: "POST",
         headers: {
           "X-Auth-Token": server.token,
           "Content-Type": "application/json",
-          "Origin": `http://127.0.0.1:${testPort}`,
+          "Origin": `${serverOrigin(server)}`,
         },
         body: JSON.stringify({ intervalSec: 5 }),
       });
       expect(res.status).toBe(400);
       
       // Test too high
-      res = await fetch(`http://127.0.0.1:${testPort}/api/watch-interval`, {
+      res = await fetch(`${serverOrigin(server)}/api/watch-interval`, {
         method: "POST",
         headers: {
           "X-Auth-Token": server.token,
           "Content-Type": "application/json",
-          "Origin": `http://127.0.0.1:${testPort}`,
+          "Origin": `${serverOrigin(server)}`,
         },
         body: JSON.stringify({ intervalSec: 4000 }),
       });
       expect(res.status).toBe(400);
       
       // Test valid
-      res = await fetch(`http://127.0.0.1:${testPort}/api/watch-interval`, {
+      res = await fetch(`${serverOrigin(server)}/api/watch-interval`, {
         method: "POST",
         headers: {
           "X-Auth-Token": server.token,
           "Content-Type": "application/json",
-          "Origin": `http://127.0.0.1:${testPort}`,
+          "Origin": `${serverOrigin(server)}`,
         },
         body: JSON.stringify({ intervalSec: 30 }),
       });
@@ -939,7 +934,6 @@ describe("Stage B: Watch interval control", () => {
   });
 
   it("watch interval change takes effect", async () => {
-    const testPort = 45132;
     const { servers, tools } = await loadToolsJson(fixtureToolsPath);
     const report = analyzeTools(tools, servers);
     
@@ -947,7 +941,7 @@ describe("Stage B: Watch interval control", () => {
     let callbackValue = 0;
     
     const server = await startServer({
-      port: testPort,
+      port: 0,
       onReady: () => {},
       getReport: () => report,
       cwd: __dirname,
@@ -959,12 +953,12 @@ describe("Stage B: Watch interval control", () => {
     });
 
     try {
-      const res = await fetch(`http://127.0.0.1:${testPort}/api/watch-interval`, {
+      const res = await fetch(`${serverOrigin(server)}/api/watch-interval`, {
         method: "POST",
         headers: {
           "X-Auth-Token": server.token,
           "Content-Type": "application/json",
-          "Origin": `http://127.0.0.1:${testPort}`,
+          "Origin": `${serverOrigin(server)}`,
         },
         body: JSON.stringify({ intervalSec: 60 }),
       });
@@ -986,12 +980,11 @@ describe("Stage B: Watch interval control", () => {
   });
 
   it("rejects non-integer intervals (Item 8)", async () => {
-    const testPort = 45133;
     const { servers, tools } = await loadToolsJson(fixtureToolsPath);
     const report = analyzeTools(tools, servers);
     
     const server = await startServer({
-      port: testPort,
+      port: 0,
       onReady: () => {},
       getReport: () => report,
       cwd: __dirname,
@@ -999,12 +992,12 @@ describe("Stage B: Watch interval control", () => {
 
     try {
       // Test string "10"
-      let res = await fetch(`http://127.0.0.1:${testPort}/api/watch-interval`, {
+      let res = await fetch(`${serverOrigin(server)}/api/watch-interval`, {
         method: "POST",
         headers: {
           "X-Auth-Token": server.token,
           "Content-Type": "application/json",
-          "Origin": `http://127.0.0.1:${testPort}`,
+          "Origin": `${serverOrigin(server)}`,
         },
         body: JSON.stringify({ intervalSec: "10" }),
       });
@@ -1013,12 +1006,12 @@ describe("Stage B: Watch interval control", () => {
       expect(data1.error).toContain("integer");
       
       // Test float 10.5
-      res = await fetch(`http://127.0.0.1:${testPort}/api/watch-interval`, {
+      res = await fetch(`${serverOrigin(server)}/api/watch-interval`, {
         method: "POST",
         headers: {
           "X-Auth-Token": server.token,
           "Content-Type": "application/json",
-          "Origin": `http://127.0.0.1:${testPort}`,
+          "Origin": `${serverOrigin(server)}`,
         },
         body: JSON.stringify({ intervalSec: 10.5 }),
       });
@@ -1031,12 +1024,11 @@ describe("Stage B: Watch interval control", () => {
   });
 
   it("validates Origin with exact port match (Item 6)", async () => {
-    const testPort = 45134;
     const { servers, tools } = await loadToolsJson(fixtureToolsPath);
     const report = analyzeTools(tools, servers);
     
     const server = await startServer({
-      port: testPort,
+      port: 0,
       onReady: () => {},
       getReport: () => report,
       cwd: __dirname,
@@ -1044,7 +1036,7 @@ describe("Stage B: Watch interval control", () => {
 
     try {
       // Wrong port
-      let res = await fetch(`http://127.0.0.1:${testPort}/api/watch-interval`, {
+      let res = await fetch(`${serverOrigin(server)}/api/watch-interval`, {
         method: "POST",
         headers: {
           "X-Auth-Token": server.token,
@@ -1056,31 +1048,31 @@ describe("Stage B: Watch interval control", () => {
       expect(res.status).toBe(403);
       
       // Evil suffix (http://127.0.0.1:PORT.evil.com)
-      res = await fetch(`http://127.0.0.1:${testPort}/api/watch-interval`, {
+      res = await fetch(`${serverOrigin(server)}/api/watch-interval`, {
         method: "POST",
         headers: {
           "X-Auth-Token": server.token,
           "Content-Type": "application/json",
-          "Origin": `http://127.0.0.1:${testPort}.evil.com`,
+          "Origin": `http://127.0.0.1:${serverListenPort(server)}.evil.com`,
         },
         body: JSON.stringify({ intervalSec: 30 }),
       });
       expect(res.status).toBe(403);
       
       // HTTPS (should be http)
-      res = await fetch(`http://127.0.0.1:${testPort}/api/watch-interval`, {
+      res = await fetch(`${serverOrigin(server)}/api/watch-interval`, {
         method: "POST",
         headers: {
           "X-Auth-Token": server.token,
           "Content-Type": "application/json",
-          "Origin": `https://127.0.0.1:${testPort}`,
+          "Origin": `https://127.0.0.1:${serverListenPort(server)}`,
         },
         body: JSON.stringify({ intervalSec: 30 }),
       });
       expect(res.status).toBe(403);
       
       // Missing Origin
-      res = await fetch(`http://127.0.0.1:${testPort}/api/watch-interval`, {
+      res = await fetch(`${serverOrigin(server)}/api/watch-interval`, {
         method: "POST",
         headers: {
           "X-Auth-Token": server.token,
@@ -1091,12 +1083,12 @@ describe("Stage B: Watch interval control", () => {
       expect(res.status).toBe(403);
       
       // Valid Origin
-      res = await fetch(`http://127.0.0.1:${testPort}/api/watch-interval`, {
+      res = await fetch(`${serverOrigin(server)}/api/watch-interval`, {
         method: "POST",
         headers: {
           "X-Auth-Token": server.token,
           "Content-Type": "application/json",
-          "Origin": `http://127.0.0.1:${testPort}`,
+          "Origin": `${serverOrigin(server)}`,
         },
         body: JSON.stringify({ intervalSec: 30 }),
       });
