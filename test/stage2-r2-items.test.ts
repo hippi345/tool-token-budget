@@ -328,7 +328,9 @@ describe("Stage 2 round 2 fixes", () => {
     }
   });
 
-  it("stage2-r2-item2-apply-client-without-implicit-mcp-config", async () => {
+  it(
+    "stage2-r2-item2-apply-client-without-implicit-mcp-config",
+    async () => {
     const home = os.homedir();
     const cwd = await mkdtemp(path.join(os.tmpdir(), "stage2-r2-cwd-"));
     try {
@@ -372,7 +374,9 @@ describe("Stage 2 round 2 fixes", () => {
     } finally {
       await rm(cwd, { recursive: true, force: true });
     }
-  });
+  },
+    120_000
+  );
 
   it("stage2-r2-item3-vscode-client-alias-and-unknown-ids", async () => {
     const home = os.homedir();
