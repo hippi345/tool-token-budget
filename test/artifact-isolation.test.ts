@@ -29,18 +29,7 @@ describe("Test artifact isolation", () => {
     
     if (existsSync(tmpDir)) {
       const entries = readdirSync(tmpDir);
-      
-      // Filter out the special test-isolation directory which is managed by vitest
-      const artifactEntries = entries.filter(entry => entry !== "test-isolation");
-      
-      expect(artifactEntries).toHaveLength(0);
-      
-      if (artifactEntries.length > 0) {
-        throw new Error(
-          `Test artifacts found in tmp/: ${artifactEntries.join(", ")}. ` +
-          `Tests must write to os.tmpdir() only and clean up after themselves.`
-        );
-      }
+      expect(entries).toHaveLength(0);
     }
   });
 

@@ -20,6 +20,7 @@ import {
   detectClientConfigs,
   getAppDataDirFor,
 } from "../src/discover/clientConfigs.js";
+import { assertClientConfigPathsIsolated } from "../src/utils/testHomeGuard.js";
 import {
   getServerNamesFromClientConfig,
   mergeProposedOntoClientConfig,
@@ -28,9 +29,10 @@ import {
 import { computeConfigContentHash } from "../src/mcp/configGuards.js";
 import { startServer } from "../src/ui/server.js";
 import type { Report } from "../src/types.js";
+import { injectStubServerPath, stubServerConfigPath } from "./helpers/stubServerPath.js";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const stub = path.join(repoRoot, "fixtures", "stub-mcp-server.mjs");
+const stub = stubServerConfigPath(repoRoot);
 
 async function copyFixtureToTemp(
   relFixture: string,
@@ -42,7 +44,7 @@ async function copyFixtureToTemp(
   await mkdir(path.dirname(configPath), { recursive: true });
   await copyFile(path.join(repoRoot, relFixture), configPath);
   let content = await readFile(configPath, "utf8");
-  content = content.replace(/fixtures\/stub-mcp-server\.mjs/g, stub);
+  content = injectStubServerPath(content, repoRoot);
   await writeFile(configPath, content, "utf8");
   return { dir, configPath };
 }
@@ -110,13 +112,19 @@ async function roundTripClient(
 describe("Stage 2 — client write support", () => {
   it("stage2-item-guard-no-real-home", async () => {
     const realHome = process.env.__TEST_REAL_HOME || process.env.REAL_HOME;
+    const isolatedHome = process.env.__TEST_ISOLATED_HOME;
     expect(realHome).toBeTruthy();
+    expect(isolatedHome).toBeTruthy();
     expect(path.normalize(os.homedir())).not.toBe(path.normalize(realHome));
     const clients = await detectClientConfigs(process.cwd());
-    const normalizedRealHome = path.normalize(realHome);
-    for (const client of clients) {
-      expect(path.normalize(client.path)).not.toContain(normalizedRealHome);
-    }
+    assertClientConfigPathsIsolated(
+      clients.map((c) => c.path),
+      {
+        isolatedHome: isolatedHome!,
+        realHome: realHome!,
+        cwd: process.cwd(),
+      }
+    );
   });
 
   it("stage2-adapter-vscode-injects-stdio-type", () => {
@@ -294,7 +302,7 @@ describe("Stage 2 — client write support", () => {
       windsurfPath
     );
     let content = await readFile(windsurfPath, "utf8");
-    content = content.replace(/fixtures\/stub-mcp-server\.mjs/g, stub);
+    content = injectStubServerPath(content, repoRoot);
     await writeFile(windsurfPath, content, "utf8");
 
     const exportRoot = path.join(testDir, "exports");
