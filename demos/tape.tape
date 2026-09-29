@@ -52,7 +52,7 @@ Sleep 3s
 Type ""
 Sleep 500ms
 Enter
-Type "# Done — review tool-token-budget-export / proposed siblings (legacy names still supported)"
+Type "# Done — review report.json, defer-hints.json, and tool-token-budget.keep.json under --out"
 Sleep 500ms
 Enter
 Sleep 1s

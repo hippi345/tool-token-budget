@@ -66,9 +66,12 @@
   },
   "files": [
     "dist",
-    "fixtures",
     "README.md",
-    "gui/package.json"
+    "LICENSE",
+    "gui/package.json",
+    "fixtures/tools-tiny.json",
+    "fixtures/tokenizers/tiny-bpe/tokenizer.json",
+    "fixtures/tokenizers/tiny-bpe/tokenizer_config.json"
   ],
   "main": "./dist/index.js",
   "exports": {

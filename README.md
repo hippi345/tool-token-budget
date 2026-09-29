@@ -6,7 +6,7 @@
 
 Source: [github.com/hippi345/tool-token-budget](https://github.com/hippi345/tool-token-budget)
 
-npm package: `tool-token-budget` (CLI binary `tool-token-budget`; `schema-budget` remains a backward-compatible alias).
+npm package: `tool-token-budget`. CLI binaries: `tool-token-budget` (primary) and `schema-budget` (backward-compatible alias to the same entrypoint — see `package.json` `bin` field).
 
 Offline, deterministic, CI-friendly. No LLM. No cloud uploads.
 
@@ -25,7 +25,7 @@ MCP clients load tool names, descriptions, and JSON schemas into model context. 
 
 **Visual demo:**
 
-![Tool Token Budget Demo](demos/tool-token-budget-demo.gif)
+![Tool Token Budget Demo](https://raw.githubusercontent.com/hippi345/tool-token-budget/main/demos/tool-token-budget-demo.gif)
 
 *Animated demo showing bloated fixture analysis → 99% token savings*
 
@@ -92,7 +92,7 @@ node dist/cli.js lint-server --tools-json fixtures/tools-bloated.json
 
 **Local web dashboard** for exploring, editing, and exporting tool token budgets with live updates:
 
-![Tool Token Budget Dashboard](screenshots/dashboard-stage-b.png)
+![Tool Token Budget Dashboard](https://raw.githubusercontent.com/hippi345/tool-token-budget/main/screenshots/dashboard-stage-b.png)
 *Dashboard view showing servers, tools, and live savings*
 
 ```bash

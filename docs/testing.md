@@ -1,6 +1,6 @@
 # Testing
 
-schema-budget v1 includes comprehensive test coverage at multiple levels: unit tests, integration tests, and functional smoke tests.
+Tool Token Budget v1 includes comprehensive test coverage at multiple levels: unit tests, integration tests, and functional smoke tests.
 
 ## Running Tests
 
