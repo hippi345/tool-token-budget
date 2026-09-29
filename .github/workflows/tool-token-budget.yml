@@ -38,14 +38,14 @@ jobs:
         run: npm test
 
       - name: Analyze fixture - should pass
-        if: matrix.os == "ubuntu-latest"
+        if: matrix.os == 'ubuntu-latest'
         run: |
           node dist/cli.js analyze \
             --tools-json fixtures/tools-tiny.json \
             --budget 100
 
       - name: Analyze bloated fixture - expect warnings
-        if: matrix.os == "ubuntu-latest"
+        if: matrix.os == 'ubuntu-latest'
         run: |
           node dist/cli.js analyze \
             --tools-json fixtures/tools-bloated.json \
@@ -53,14 +53,14 @@ jobs:
         continue-on-error: false
 
       - name: Lint server - author mode (should fail on bloat)
-        if: matrix.os == "ubuntu-latest"
+        if: matrix.os == 'ubuntu-latest'
         run: |
           node dist/cli.js lint-server \
             --tools-json fixtures/tools-bloated.json \
             --fail-on warn || echo "Expected failure on bloated fixture"
 
       - name: Generate report artifacts
-        if: matrix.os == "ubuntu-latest"
+        if: matrix.os == 'ubuntu-latest'
         run: |
           node dist/cli.js emit \
             --tools-json fixtures/tools-bloated.json \
@@ -72,7 +72,7 @@ jobs:
 
       - name: Upload tool token budget report
         uses: actions/upload-artifact@v4
-        if: always() && matrix.os == "ubuntu-latest"
+        if: always() && matrix.os == 'ubuntu-latest'
         with:
           name: tool-token-budget-report
           path: |
@@ -82,7 +82,7 @@ jobs:
             tool-token-budget-reports/tool-token-budget.sarif
 
       - name: Display savings summary
-        if: matrix.os == "ubuntu-latest"
+        if: matrix.os == 'ubuntu-latest'
         run: |
           echo "## Tool Token Budget Report" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
