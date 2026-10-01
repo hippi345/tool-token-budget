@@ -36,7 +36,13 @@ jobs:
         run: npm test
 
       - name: Publish to npm
-        run: npm publish --provenance --access public
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          if npm view "tool-token-budget@${VERSION}" version >/dev/null 2>&1; then
+            echo "tool-token-budget@${VERSION} is already on npm; skipping publish."
+          else
+            npm publish --provenance --access public
+          fi
 
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
