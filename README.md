@@ -191,7 +191,7 @@ Useful flags:
 - `--keep-per-server <n>` — keep up to N cheapest tools **per server** (default: 2)
 - `--disable-servers-over <tokens>` — disable entire servers over threshold (warns on removal)
 - `--format mcp-json\|defer-hints\|both` — emit selection (default `both`)
-- `--profile claude\|cursor\|generic` — emit emphasis (affects proposal format)
+- `--profile claude\|cursor\|generic\|vscode\|windsurf\|gemini-settings\|antigravity\|codex` — emit emphasis (affects proposal format)
 - `--timeout <ms>` — stdio discover timeout (default 15000)
 - `--watch` — watch config/tools files and re-run on changes (debounced)
 - `--watch-interval <sec>` — polling interval for watch mode and UI live polling (default 30, min 10)
