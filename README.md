@@ -124,7 +124,7 @@ npx tool-token-budget ui mcp.json
   - Never overwrites mcp.json (uses `.tool-token-budget-proposed.json` suffix; legacy `.schema-budget-proposed.json` still applied when present)
   - Secrets always appear as `<from-original>` in outputs
 - **Client selector** in header:
-  - Auto-detects configs for Cursor, Claude Desktop, Claude Code, VS Code, Windsurf, Antigravity, Gemini CLI, OpenAI Codex CLI
+  - Auto-detects configs for Cursor, Claude Desktop, Claude Code, VS Code, Windsurf, Antigravity, Gemini CLI, OpenAI Codex CLI, GitHub Copilot
   - Switch between detected clients on the fly
   - View-only mode for clients without emit profiles (export disabled)
 
