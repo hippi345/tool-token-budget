@@ -58,7 +58,7 @@
   "devDependencies": {
     "@huggingface/tokenizers": "0.2.0",
     "@playwright/test": "^1.64.1",
-    "@testing-library/react": "^16.1.0",
+    "@testing-library/react": "^16.3.3",
     "@types/node": "^22.15.0",
     "happy-dom": "^20.14.5",
     "typescript": "^5.8.0",
