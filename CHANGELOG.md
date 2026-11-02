@@ -5,6 +5,15 @@ All notable changes to **Tool Token Budget** are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-11-02
+
+### Changed
+
+- README opens with the demo GIF, a one-line "why", and real sample `analyze` output (#11).
+- Docs: GitHub Copilot added to the GUI auto-detect client list (#6); `--profile` flag values fixed (#5).
+- CI: npm publish is skipped when the version is already on the registry (#4).
+- Dependencies: @modelcontextprotocol/sdk 1.32.2 (#8), @decimalturn/toml-patch 3.3.1 (#7), @playwright/test 1.64.1 (#9), @testing-library/react 16.3.3 (#10).
+
 ## [1.0.0] - 2026-09-29
 
 First stable release under the **Tool Token Budget** name (`tool-token-budget` on npm). The CLI binary `schema-budget` remains a backward-compatible alias for existing installs and scripts.
