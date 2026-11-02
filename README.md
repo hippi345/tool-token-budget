@@ -1,5 +1,19 @@
 # Tool Token Budget
 
+<p align="center"><img src="demos/tool-token-budget-demo.gif" alt="Tool Token Budget demo: analyzing a bloated MCP tool fixture" width="760"></p>
+
+**Why:** MCP tool schemas quietly eat thousands of context tokens before you type anything; this measures them and tells you what to trim.
+
+Sample output (`tool-token-budget analyze --tools-json fixtures/tools-bloated.json`, ~3550 tokens across 5 tools / 2 servers):
+
+| Server | Tool | Est. tokens | Name | Description | Schema |
+| --- | --- | ---: | ---: | ---: | ---: |
+| bloated-server | mega_search | 3451 | 2 | 321 | 3128 |
+| bloated-server | medium_list | 50 | 2 | 11 | 37 |
+| bloated-server | tiny_helper | 18 | 2 | 2 | 14 |
+| other | beta | 18 | 1 | 3 | 14 |
+| other | alpha | 13 | 1 | 3 | 9 |
+
 [![Tool Token Budget CI](https://github.com/hippi345/tool-token-budget/actions/workflows/tool-token-budget.yml/badge.svg)](https://github.com/hippi345/tool-token-budget/actions/workflows/tool-token-budget.yml)
 
 **Measure MCP tool schema token cost → lint bloat → emit slim keep / defer proposals.**
@@ -23,11 +37,7 @@ MCP clients load tool names, descriptions, and JSON schemas into model context. 
 
 ## Demo
 
-**Visual demo:**
-
-![Tool Token Budget Demo](https://raw.githubusercontent.com/hippi345/tool-token-budget/main/demos/tool-token-budget-demo.gif)
-
-*Animated demo showing bloated fixture analysis → 99% token savings*
+*The demo GIF at the top shows bloated fixture analysis → 99% token savings*
 
 To regenerate the demo GIF:
 ```bash
