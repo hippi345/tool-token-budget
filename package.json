@@ -1,6 +1,6 @@
 {
   "name": "tool-token-budget",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Tool Token Budget — measure MCP tool schema token cost, lint bloat, and emit slim keep-lists plus defer hints",
   "type": "module",
   "workspaces": [
